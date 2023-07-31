@@ -1,0 +1,58 @@
+{
+  "name": "vitepress-starter",
+  "description": "Sora Network 社区文档",
+  "repository": "https://github.com/netsora/SoraBot-website",
+  "keywords": [
+    "graia-ariadne",
+    "graia-project",
+    "graiax"
+  ],
+  "author": "netsora",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "serve": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "lint": "eslint --color --ext .js,.ts,.jsx,.tsx,.vue .",
+    "lint:fix": "eslint --fix --color --ext .js,.ts,.jsx,.tsx,.vue .",
+    "style": "prettier -c .",
+    "style:fix": "prettier -w .",
+    "minfont": "node scripts/minfont.cjs"
+  },
+  "devDependencies": {
+    "@types/hash-sum": "^1.0.0",
+    "@types/markdown-it": "^12.2.3",
+    "@types/markdown-it-container": "^2.0.6",
+    "@types/mermaid": "^9.2.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.16.1",
+    "fontmin": "^0.9.9",
+    "hash-sum": "^2.0.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "mermaid": "^10.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.0.0",
+    "rollup-plugin-external-globals": "^0.8.0",
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6",
+    "vite-plugin-compression": "^0.5.1",
+    "vitepress": "1.0.0-beta.7",
+    "vue": "^3.3.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "@types/react",
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}
