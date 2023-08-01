@@ -10,7 +10,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'shortcut icon', href: 'https://raw.githubusercontent.com/netsora/SoraBot/master/resources/logo.jpg' }],
+    ['link', { rel: 'shortcut icon', href: 'https://ghproxy.com/https://raw.githubusercontent.com/netsora/SoraBot/master/resources/logo.jpg' }],
     ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/mermaid/9.1.7/mermaid.min.js' }],
   ],
 
@@ -73,7 +73,7 @@ export default defineConfig({
       ],
   },
     editLink: {
-      pattern: 'https://github.com/netsora/SoraBot-website/edit/vitepress/docs/:path',
+      pattern: 'https://github.com/netsora/SoraBot-website/edit/master/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
     socialLinks: [

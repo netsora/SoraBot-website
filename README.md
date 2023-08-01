@@ -1,7 +1,10 @@
-# Sora Network 社区文档
+# SoraBot 使用文档
 
 
 ## 开发&构建
+> **Note**
+> 请勿手动安装 `vite` 依赖，否则工作不正常（`vue` 选装）
+
 
 > 本项目使用 **pnpm** 作为包管理器  
 > 如果你没有安装 **pnpm**，那你可以使用 `corepack enable` 命令来安装 **pnpm** 和 **yarn**  
@@ -12,6 +15,8 @@
 3. 开发环境使用命令 `pnpm serve` 启动服务器
 4. 使用命令 `pnpm build` 生成最终页面
 
-### 注意事项
 
-1. 请勿手动安装 `vite` 依赖，否则工作不正常（`vue` 选装）
+
+
+## 鸣谢
+* [`GraiaCommunity/Docs`](https://github.com/GraiaCommunity/Docs)：本文档主要样式参考
