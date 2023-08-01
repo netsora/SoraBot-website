@@ -4,18 +4,32 @@ description: Setup Node
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install node.js
+      uses: actions/setup-node@v3
       with:
         node-version: "16"
 
-    - id: pnpm-cache-dir-path
-      run: echo "dir=$(pnpm cache dir)" >> $GITHUB_OUTPUT
-      shell: bash
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
+    - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
     - uses: actions/cache@v3
-      with:
-        path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - run: pnpm install
+    - name: Install dependencies
+      run: pnpm install
       shell: bash
