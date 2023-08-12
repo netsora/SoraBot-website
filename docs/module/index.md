@@ -10,7 +10,14 @@ next: false
 ## 基础
 
 * [管理林汐](./base/manager.md)：管理林汐 
+
+## 核心
+
+* [签到](./core/sign.md)：签到
+* [绑定](./core/bind.md)：跨平台账号绑定
+
 ---
+
 玩原玩的↓
 <img
     src="/images/wangwang.webp"

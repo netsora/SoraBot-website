@@ -7,36 +7,32 @@ title: 管理林汐
 
 ## 更新
 
-<Badge type="danger">Bot 协助者</Badge> 
 更新林汐
 
-```
+```shell
 @bot /更新
 ```
 
 ## 检查更新
 
-<Badge type="danger">Bot 协助者</Badge> 
 检查林汐更新情况
 
-```
+```shell
 @bot /检查更新
 ```
 
 ## 重启
 
-<Badge type="danger">Bot 管理员</Badge> 
 重启林汐
 
-```
+```shell
 @bot /重启
 ```
 
 ## cmd
 
-<Badge type="danger">Bot 管理员</Badge> 
 运行终端命令
 
-```
+```shell
 @bot /cmd
 ```

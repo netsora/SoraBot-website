@@ -38,12 +38,18 @@ export default defineConfig({
             ]
           },
           {
-              text: '基础',
-              collapsed: true,
-              items: [
-                { text: '更新', link: '/module/' },
-              ]
-            },
+            text: '基础',
+            items: [
+              { text: '更新', link: '/module/base/manager' },
+            ]
+          },
+          {
+            text: '核心',
+            items: [
+              { text: '签到', link: '/module/core/sign' },
+              { text: '跨平台绑定', link: '/module/core/bind' },
+            ]
+          },
         ],
       '/develop/': [
           {

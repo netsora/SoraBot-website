@@ -102,58 +102,12 @@ LOG_LEVEL=INFO
 
 NICKNAME=["林汐","Sora"]
 
-# Bot管理员ID
-# 启动后，林汐会创建 ID 为 231010 的 Bot管理员账号，并设置密码。您需要输入 /登录 231010 [密码] 来绑定管理员账户
-BOT_ADMIN=["231010"]
-
-# Bot协助者ID
-# 启动后，林汐会分别创建ID为 666666、233333的 Bot协助者账号，并设置密码。您需要输入 /登录 231010 [密码] 来绑定协助者账户
-BOT_HELPER=["666666","233333"]
-
 # 如果使用 Telegram 适配器，请务必填写！
 PROXY=""
 
 ALCONNA_USE_COMMAND_START=true
 ```
 
-### config.yaml
-```yaml 
-Award:
-  login:        # ---> [20, 10, 0]
-    - 20        # 硬币奖励
-    - 10        # 好感度奖励
-    - 0         # 经验值奖励
-  sign:         # ---> [[30, 60], 5, 100]
-    - [30, 60]  
-    - 5
-    - 100
-
-Level:
-  # 初始经验阈值
-  base_exp: 150
-  # 经验系数
-  cardinality: 1.2
-  # 最大等级
-  max_level: 60
-
-```
-
-* [Award](#award) 为 林汐 奖励机制相关设置
-* [Level](#level) 等级机制相关设置
-
-## 解析配置
-
-### Award
-* login：       注册奖励
-    - 20        硬币奖励
-    - 10        好感度奖励
-    - 0         经验值奖励
-* sign：        注册奖励
-    - [30, 60]  硬币奖励 (最小值: 30, 最大值: 60)
-    - 5         好感度奖励
-    - 100       经验值奖励
-
-### Level
-* base_exp      初始经验阈值
-* cardinality   经验系数
-* max_level     最大等级
+::: tsukkomi
+你是否十分好奇为什么配置文件中没有 `SUPERUSER` 或是 `BOT_ADMIN`? <curtain>自己试试就知道啦</curtain>
+:::
