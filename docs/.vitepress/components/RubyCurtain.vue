@@ -1,34 +1,29 @@
 <!-- Author: I Love Study <1450069615@qq.com> -->
 
+<script setup lang="ts">
+interface Props {
+  up: string
+  title?: string
+  type: string
+}
+
+withDefaults(defineProps<Props>(), {
+  up: undefined,
+  title: '你知道的太多了',
+  type: undefined
+})
+</script>
+
 <template>
   <ruby>
     <slot></slot>
     <rp>(</rp>
     <rt>
-      <Curtain :title="title" :type="type">{{ up }}</Curtain>
+      <curtain :title="title" :type="type">{{ up }}</curtain>
     </rt>
     <rp>)</rp>
   </ruby>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'RubyCurtain',
-  props: {
-    up: String,
-    title: {
-      type: String,
-      default: '你知道的太多了',
-    },
-    type: {
-      type: String,
-      default: '',
-    },
-  },
-})
-</script>
 
 <style scoped lang="scss">
 rt .heimu {

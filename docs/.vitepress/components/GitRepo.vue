@@ -3,6 +3,22 @@
  Co-Author: Redlnn <w731347477@gmail.com>
 -->
 
+<script setup lang="ts">
+interface Props {
+  user: string
+  repo: string
+  href: string
+  archived: boolean
+}
+
+withDefaults(defineProps<Props>(), {
+  user: undefined,
+  repo: undefined,
+  href: undefined,
+  archived: false
+})
+</script>
+
 <template>
   <div class="repo" align="left">
     <div class="repo-content">
@@ -36,30 +52,12 @@
       <p class="repo-meta">
         <span class="repo-meta-lang">
           <span class="repo-meta-lang-ico" style="background-color: #3572a5"></span>
-          {{ language }}
+          Python ←.← 废话
         </span>
       </p>
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'GitRepo',
-  props: {
-    user: String,
-    repo: String,
-    href: String,
-    language: String,
-    archived: {
-      type: Boolean,
-      default: false,
-    },
-  },
-})
-</script>
 
 <style scoped lang="scss">
 .repo {

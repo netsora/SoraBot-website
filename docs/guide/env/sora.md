@@ -108,6 +108,6 @@ PROXY=""
 ALCONNA_USE_COMMAND_START=true
 ```
 
-::: tsukkomi
+::: tsukkomi 
 你是否十分好奇为什么配置文件中没有 `SUPERUSER` 或是 `BOT_ADMIN`? <curtain>自己试试就知道啦</curtain>
 :::

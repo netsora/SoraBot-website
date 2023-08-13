@@ -3,17 +3,13 @@
  Co-Author: Redlnn <w731347477@gmail.com>
 -->
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+interface Props {
+  title: string
+}
 
-export default defineComponent({
-  name: 'Curtain',
-  props: {
-    title: {
-      type: String,
-      default: '你知道的太多了',
-    },
-  },
+withDefaults(defineProps<Props>(), {
+  title: '你知道的太多了'
 })
 </script>
 
@@ -25,33 +21,35 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .heimu {
-  color: #10B981;
+  color: rgba(60, 60, 67);
   border-radius: 4px;
   padding: 1.5px 4px;
   margin: 0 2px;
   text-shadow: none;
-  background-color: #10B981;
-  transition: color 0.13s linear, background-color 0.13s linear;
+  background-color: rgba(60, 60, 67);
+  transition:
+    color 0.13s linear,
+    background-color 0.13s linear;
 
   html.dark & {
-    background-color: #10B981;
-    color: #10B981;
+    background-color: #e3e3e3;
+    color: #e3e3e3;
   }
 
   &:deep() {
     code {
       padding: 0.1rem 0.25rem;
-      background-color: #10B981;
-      color: #10B981;
+      background-color: rgba(60, 60, 67);
+      color: rgba(60, 60, 67);
       html.dark & {
-        background-color: #10B981;
-        color: #10B981;
+        background-color: #e3e3e3;
+        color: #e3e3e3;
       }
     }
     a {
-      color: #10B981;
+      color: rgba(60, 60, 67);
       html.dark & {
-        color: #10B981;
+        color: #e3e3e3;
       }
     }
   }
@@ -63,7 +61,7 @@ export default defineComponent({
 
     &:deep() code {
       background-color: var(--vp-c-bg) !important;
-      color: #10B981 !important;
+      color: rgba(60, 60, 67) !important;
     }
 
     html.dark &:deep() a,

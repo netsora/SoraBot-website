@@ -31,7 +31,7 @@
  */
 
 import MarkdownIt from 'markdown-it'
-import { RenderRule } from 'markdown-it/lib/renderer'
+import type { RenderRule } from 'markdown-it/lib/renderer'
 import container from 'markdown-it-container'
 
 export const containerPlugin = (md: MarkdownIt) => {
@@ -56,7 +56,7 @@ function createContainer(klass: string, defaultTitle: string, md: MarkdownIt): C
           const title = md.renderInline(info || defaultTitle)
           switch (klass) {
             case 'code-group':
-              return `<CodeGroup>\n`
+              return '<CodeGroup>\n'
             case 'code-group-item':
               return `<CodeGroupItem title="${info}">\n`
             default:
@@ -65,14 +65,14 @@ function createContainer(klass: string, defaultTitle: string, md: MarkdownIt): C
         } else {
           switch (klass) {
             case 'code-group':
-              return `</CodeGroup>\n`
+              return '</CodeGroup>\n'
             case 'code-group-item':
-              return `</CodeGroupItem>\n`
+              return '</CodeGroupItem>\n'
             default:
-              return `</div>\n`
+              return '</div>\n'
           }
         }
-      },
-    },
+      }
+    }
   ]
 }

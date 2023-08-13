@@ -1,7 +1,5 @@
+import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { Theme } from 'vitepress'
-
-import '../styles/index.scss'
 
 import Layout from './Layout.vue'
 
@@ -22,19 +20,22 @@ import Curtain from '../components/Curtain.vue'
 import GitRepo from '../components/GitRepo.vue'
 import Loading from '../components/Loading.vue'
 import MoreInfo from '../components/MoreInfo.vue'
+import ProjectInfo from '../components/ProjectInfo.vue'
 import RubyCurtain from '../components/RubyCurtain.vue'
 import VolumeBar from '../components/VolumeBar.vue'
 
+import '../styles/index.scss'
+
 const theme: Theme = {
-  // ...DefaultTheme,
+  ...DefaultTheme,
+
   // root component to wrap each page
   Layout,
 
-  // this is a Vue 3 functional component
-  NotFound: DefaultTheme.NotFound,
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   enhanceApp({ app, router, siteData }) {
+    DefaultTheme.enhanceApp({ app, router, siteData })
+
     // app is the Vue 3 app instance from `createApp()`.
     // router is VitePress' custom router. `siteData` is
     // a `ref` of current site-level metadata.
@@ -51,13 +52,14 @@ const theme: Theme = {
     app.component('GitRepo', GitRepo)
     app.component('Loading', Loading)
     app.component('MoreInfo', MoreInfo)
+    app.component('ProjectInfo', ProjectInfo)
     app.component('RubyCurtain', RubyCurtain)
     app.component('VolumeBar', VolumeBar)
 
     app.component('CodeGroup', CodeGroup)
     app.component('CodeGroupItem', CodeGroupItem)
     app.component('Mermaid', Mermaid)
-  },
+  }
 }
 
 export default theme

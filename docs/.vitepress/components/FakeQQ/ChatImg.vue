@@ -1,61 +1,66 @@
-<!--
- 修改自 https://github.com/Redlnn/Fake-QQ-Chat-Window
+<script setup lang="ts">
+interface Props {
+  name: string
+  avatar?: string
+  tag?: string
+  tagBgColor?: string
+  tagColor?: string
+  src: string
+  onright: boolean
+}
 
- MIT License
-
- Copyright (c) 2022 Red_lnn
-
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
-
- The above copyright notice and this permission notice shall be included in all
- copies or substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
-
- @author Red_lnn
- @website https://github.com/Redlnn/Fake-QQ-Chat-Window
-
--->
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'ChatImg',
-  props: {
-    name: { type: String, required: true },
-    avatar: String,
-    src: { type: String, required: true },
-    onright: Boolean,
-    maxWidth: { type: String, default: '250px' },
-  },
+withDefaults(defineProps<Props>(), {
+  name: '',
+  avatar: undefined,
+  tag: undefined,
+  tagBgColor: undefined,
+  tagColor: undefined,
+  src: undefined,
+  onright: false
 })
 </script>
 
 <template>
-  <div class="fakeqq-message" :class="[onright ? 'right' : 'left']">
-    <div
-      v-if="avatar"
-      :style="{ 'background-image': `url(${avatar})` }"
-      class="fakeqq-message__avatar"
-    ></div>
-    <div v-else class="fakeqq-message__avatar">
-      <span class="fakeqq-message__text-avatar">{{ name[0] }}</span>
+  <section>
+    <div class="message">
+      <div
+        class="message-container"
+        :class="[onright ? 'message-container--self message-container--align-right' : '']"
+      >
+        <span class="avatar-span">
+          <div
+            v-if="avatar"
+            class="avatar message-container__avatar"
+            :style="{ backgroundImage: `url(${avatar})` }"
+          ></div>
+          <div v-else class="avatar message-container__avatar text-avatar">
+            <span>{{ name[0] }}</span>
+          </div>
+        </span>
+        <div class="user-name text-ellipsis">
+          <span class="text-ellipsis">{{ name }}</span>
+          <div
+            class="q-tag member-role-tag"
+            v-if="tag"
+            :style="{ backgroundColor: tagBgColor, color: tagColor }"
+          >
+            {{ tag }}
+          </div>
+        </div>
+        <div class="message-content__wrapper">
+          <div class="message-content__wrapper">
+            <div
+              class="msg-content-container container--others mix-message__container mix-message__container--pic"
+            >
+              <div class="message-content mix-message__inner">
+                <div class="image pic-element">
+                  <img class="image-content" :src="src" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="fakeqq-message__content">
-      <div class="fakeqq-message__name">{{ name }}</div>
-      <img :src="src" :style="{ 'max-width': maxWidth }" />
-    </div>
-  </div>
+  </section>
 </template>

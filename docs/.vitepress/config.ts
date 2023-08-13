@@ -1,105 +1,95 @@
 import { defineConfig } from 'vitepress'
 
+import { module, guide, about } from './sidebar'
+
 import mdEnhance from './mdEnhance/index'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '林汐の文档',
-  description: '基于 Nonebot2 和 go-cqhttp 开发，超可爱的林汐酱',
+
+  title: 'SoraBot 文档',
+  description: '林汐食用文档',
 
   lastUpdated: true,
+  cleanUrls: true,
 
   head: [
-    ['link', { rel: 'shortcut icon', href: 'https://ghproxy.com/https://raw.githubusercontent.com/netsora/SoraBot/master/resources/logo.jpg' }],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/mermaid/9.1.7/mermaid.min.js' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
+    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/mermaid/10.3.0/mermaid.min.js' }]
   ],
 
   themeConfig: {
-    logo: './logo.jpg',
-    nav: [
-      { text: '首页', link: '/home' },
-      { text: '模块列表', link: '/module/' },
-      { text: '开发指南', link: '/develop/forward/prepare' },
-      {
-        text: '关于我们',
-        items: [
-            { text: '关于', link: '/about/about'},
-            { text: '贡献指南', link: '/about/contribute'},
-            { text: '赞助', link: 'https://afdian.net/@netsora', target: '_blank'}
-        ]
-      }
-    ],
+    i18nRouting: true,
+    logo: '/logo.jpg',
+    nav: nav(),
     sidebar: {
-      '/module/': [
-          {
-            text: '索引',
-            items: [
-              { text: '导航', link: '/module/' },
-            ]
-          },
-          {
-            text: '基础',
-            items: [
-              { text: '更新', link: '/module/base/manager' },
-            ]
-          },
-          {
-            text: '核心',
-            items: [
-              { text: '签到', link: '/module/core/sign' },
-              { text: '跨平台绑定', link: '/module/core/bind' },
-            ]
-          },
-        ],
-      '/develop/': [
-          {
-              text: '起步',
-              items: [
-                  { text: '介绍', link:'/develop/forward/introduction' },
-                  { text: '准备工作', link:'/develop/forward/prepare' },
-              ]
-          },
-          {
-              text: '配置',
-              items: [
-                  { text: '配置林汐', link: '/develop/setting/set-sora' },
-                  { text: '配置Go-cqhttp', link: '/develop/setting/set-gocq'}
-              ]
-          }
-      ],
-      '/about/': [
-          {
-              text: '关于我们',
-              items: [
-                  { text: '关于', link:'/about/about' },
-                  { text: '贡献指南', link:'/about/contribute' },
-                  { text: '赞助', link: 'https://afdian.net/@netsora'}
-              ]
-          }
-      ],
-  },
-    editLink: {
-      pattern: 'https://github.com/netsora/SoraBot-website/edit/master/docs/:path',
-      text: '在 GitHub 上编辑此页',
+      '/module/': module,
+      '/guide/': guide,
+      '/about/': about
     },
-    socialLinks: [
-      { icon: 'discord', link: 'https://discord.com/invite/YRVwvYt58X'},
-      { icon: 'github', link: 'https://github.com/netsora/SoraBot' },
-    ],
-    // footer: {
-    //   message: 'AGPL-3.0 License',
-    //   copyright: 'Copyright © 2023 Sora Netwrok',
-    // },
+    editLink: {
+      pattern: 'https://github.com/netsora/SoraBot-website/edit/remake/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/netsora/SoraBot-website' }],
+    footer: {
+      message: 'AGPL-3.0 License',
+      copyright: 'Copyright © 2023 Sora Network'
+    },
+    lastUpdatedText: '上次更新',
     // algolia: {
     //   appId: 'VA229YZAO1',
     //   apiKey: '91fa3eb8adfd68b9adda9a7495c45944',
     //   indexName: 'graiax'
     // },
+    outlineTitle: 'On this page',
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+    darkModeSwitchLabel: '黑暗模式',
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '回到顶部 ▲'
+  },
+
+  transformHead({ assets }) {
+    // adjust the regex accordingly to match your font
+    const HarmonySansFile = assets.find(() => /HarmonyOS_Sans_SC\.woff2/)
+    if (HarmonySansFile) {
+      return [
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: HarmonySansFile,
+            as: 'font',
+            type: 'font/woff2',
+            crossorigin: ''
+          }
+        ]
+      ]
+    }
   },
 
   markdown: {
     theme: 'one-dark-pro',
     lineNumbers: true,
-    config: mdEnhance,
-  },
+    config: mdEnhance
+  }
 })
+
+function nav() {
+  return [
+    { text: '首页', link: '/home', activeMatch: '/home' },
+    { text: '模块列表', link: '/module/index', activeMatch: '/module/index' },
+    { text: '开发指南', link: '/guide/before/prepare', activeMatch: '/guide/before/prepare' },
+    {
+      text: '关于我们',
+      items: [
+        { text: '关于', link: '/about/about'},
+        { text: '贡献指南', link: '/about/contribute'},
+        { text: '赞助', link: 'https://afdian.net/@netsora', target: '_blank'}
+    ]
+    }
+  ]
+}

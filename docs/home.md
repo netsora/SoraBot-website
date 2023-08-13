@@ -26,18 +26,18 @@ next: false
 ## 使用机器人
 使用本机器人即代表您同意林汐的[使用条款](./terms-of-use.md)与[隐私政策](./privacy-policy.md)，以下为主要页面导航：
 
-### [模块列表](./module/index.md)
+### [模块列表](./module/index)
 查询详细指令的帮助。
 
-### [阅读提示](./tip.md) 
+### [阅读提示](./tip) 
 可以帮助您更好地理解文档。
 
-### [常见问题](#)
+### [常见问题](./faq)
 一些使用时出现问题的解决方案。
 
 ## 开发机器人
 
-### [开发指南](./develop/forward/prepare.md)
+### [开发指南](./guide/before/prepare)
 可以帮助您更好地搭建或开发林汐
 
 ### [论坛](https://github.com/orgs/netsora/discussions)
