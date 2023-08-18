@@ -3,9 +3,8 @@
   "description": "Sora Network 社区文档",
   "repository": "https://github.com/netsora/SoraBot-website",
   "keywords": [
-    "graia-ariadne",
-    "graia-project",
-    "graiax"
+    "SoraBot",
+    "NoneBot"
   ],
   "author": "netsora",
   "license": "AGPL-3.0",

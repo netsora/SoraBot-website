@@ -11,11 +11,9 @@ next:
 
 林汐(SoraBot) 是一款互通多平台的功能型机器人
 
-
 ## 通知账号
 
 哔哩哔哩：[@KomoriDev](https://b23.tv/QsiWeqD)
-
 
 ## 联系我们
 
@@ -38,7 +36,6 @@ Telegram 官群：[SoraBot_Official](https://t.me/SoraBot_Official)
   <GitRepo user="GraiaCommunity" repo="Docs" language="Vue"><b>Graia 社区文档</b><br />本文档主要样式参考</GitRepo>
 
 </div>
-
 
 ## 赞助
 
