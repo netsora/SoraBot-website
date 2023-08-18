@@ -1,4 +1,5 @@
 # SoraBot 贡献指南
+
 首先，感谢大家为 SoraBot 贡献代码
 本张旨在引导你更规范地向 SoraBot 提交贡献，请务必认真阅读。
 
@@ -47,7 +48,6 @@ pre-commit install
 
 SoraBot 的 commit message 格式遵循 gitmoji 规范，在创建 commit 时请牢记这一点。
 
-
 ### 工作流概述
 
 `master` 分支为 SoraBot 的开发分支，在任何情况下都请不要直接修改 `master` 分支，而是创建一个目标分支为 `sorabot:master` 的 Pull Request 来提交修改。Pull Request 标题请尽量更改成中文，以便阅读。
@@ -83,7 +83,7 @@ SoraBot 文档并没有具体的行文风格规范，但我们建议你尽量写
 
 实际上，若无开发需求，您暂时不用了解每一个文件的作用
 
-```
+```bash
 📦 SoraBot
 ├── 📂 go-cqhttp
 │   └── ......
@@ -93,7 +93,7 @@ SoraBot 文档并没有具体的行文风格规范，但我们建议你尽量写
 │       └── 📂 database         // 数据库
 │       └── 📂 plugins          // 插件
 │       └── 📂 utils            // 工具
-│       └── 📜 ...           
+│       └── 📜 ...  
 │   └── 📂 website
 │       └── 📂 .vitepress
 │           └── 📜 config.ts    // 配置文件
@@ -106,9 +106,9 @@ SoraBot 文档并没有具体的行文风格规范，但我们建议你尽量写
 │   └── 📜 bot.py               // 启动文件
 │   └── 📜 matcher_patch.py
 │   └── 📜 poetry.lock          // 依赖管理
-│   └── 📜 pyproject.toml       
-|   └── 📜 README.md       
-|   └── 📜 requirements.txt     // 依赖列表   
+│   └── 📜 pyproject.toml  
+|   └── 📜 README.md  
+|   └── 📜 requirements.txt     // 依赖列表  
 ```
 
 ### 参与开发

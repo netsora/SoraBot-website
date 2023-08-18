@@ -7,6 +7,7 @@ next: false
 ---
 
 # 配置 go-cqhttp
+
 ::: tip 我为什么需要go-cqhttp？
 SoraBot 本身只负责处理消息，需要借助 go-cqhttp 与 QQ 进行通信。  
 
@@ -14,18 +15,24 @@ SoraBot 本身只负责处理消息，需要借助 go-cqhttp 与 QQ 进行通信
 :::
 
 ## 下载
+
 下载最新版 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp/releases)，不知道下哪个可参考 [版本说明](https://docs.go-cqhttp.org/guide/quick_start.html#%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B)
 
 ## 解压
+
 * Windows下请使用自己熟悉的解压软件自行解压
 * Linux下在命令行中输入 `tar -xzvf [文件名]`
 
 ## 配置
+
 您需要修改配置中的灰色部分
+
 * 26行 签名服务器配置可参考：[#2245](https://github.com/Mrs4s/go-cqhttp/discussions/2245) 或 [Bilibili视频教程](https://www.bilibili.com/video/BV1nu411h7bS/?share_source=copy_web&vd_source=2b607adeb8e16af6519b5c3856756355)
 * 将 36行 的上报数据类型改为 `array`
-* 如果您没有修改 `.env.prod` 配置，您可以直接将 112行 `universal` 设置为 ` ws://127.0.0.1:2310/onebot/v11/ws`
+* 如果您没有修改 `.env.prod` 配置，您可以直接将 112行 `universal` 设置为 `ws://127.0.0.1:2310/onebot/v11/ws`
+
 ::: details config.yml
+
 ```yaml{4,5,26,36,112}
 # 示例版本：v1.1.0
 # go-cqhttp 默认配置文件
@@ -148,51 +155,63 @@ servers:
       middlewares:
         <<: *default # 引用默认中间件
 ```
+
 :::
 
 ## 使用
+
 ### Windows 标准启动方法
+
 1. 双击go-cqhttp_*.exe，根据提示生成运行脚本
 2. 双击运行脚本
-```txt
-[WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
-[INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
-```
+
+    ```bash
+    [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
+    [INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
+    ```
+
 3. 参照 [config.md](https://github.com/ishkong/go-cqhttp-docs/blob/main/docs/guide/config.md) 和你所用到的插件的 `README` 填入参数
 4. 再次双击运行脚本
-```txt
-[INFO]: 登录成功 欢迎使用: 林汐ᴮᴼᵀ
-```
+
+    ```bash
+    [INFO]: 登录成功 欢迎使用: 林汐ᴮᴼᵀ
+    ```
+
 如出现需要认证的信息, 请自行认证设备。
 
 此时, 基础配置完成
 
 ### Linux 标准启动方法
+
 1. 通过 SSH 连接到服务器
 2. `cd` 到解压目录
 3. 输入 `./go-cqhttp`, Enter运行 , 此时将提示
-```txt
-[WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
-[INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
-```
+
+    ```bash
+    [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
+    [INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
+    ```
+
 4. 参照 [config.md](https://github.com/ishkong/go-cqhttp-docs/blob/main/docs/guide/config.md) 和你所用到的插件的 `README` 填入参数
 5. 再次输入 ./go-cqhttp, Enter运行
-```txt
-[INFO]: 登录成功 欢迎使用: 林汐ᴮᴼᵀ
-```
+
+    ```bash
+    [INFO]: 登录成功 欢迎使用: 林汐ᴮᴼᵀ
+    ```
+
 如出现需要认证的信息, 请自行认证设备。
 
 此时, 基础配置完成
-::: warning 
+::: warning
 需要保持 go-cqhttp 在后台持续运行
 
 请配合 screen 等服务来保证断开 SSH 连接后 go-cqhttp 的持续运行
 :::
 
-
-
 ### 跳过启动的五秒延时
+
 使用命令行参数 faststart即可跳过启动的五秒钟延时，例如
+
 ```bash
 # Windows
 .\go-cqhttp.exe -faststart
