@@ -8,7 +8,8 @@ const module = [
   {
     text: '基础',
     items: [
-      { text: '更新', link: '/module/base/manager' },
+      { text: '帮助', link: '/module/base/help' },
+      { text: '管理', link: '/module/base/manager' },
     ]
   },
   {
@@ -38,7 +39,7 @@ const guide = [
   {
     text: '部署',
     items: [
-      { text: '使用 Docker 部署', link: '/guide/deploy/' },
+      { text: '使用 Docker 部署', link: '/guide/deploy/docker' },
     ]
   },
 ]

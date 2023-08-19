@@ -3,7 +3,7 @@ title: 介绍
 prev: false
 next:
   text: "准备工作 →"
-  link: "develop/forward/prepare"
+  link: "guide/before/prepare"
 ---
 
 # 介绍

@@ -2,10 +2,10 @@
 title: 准备工作
 prev:
   text: "← 介绍"
-  link: "develop/forward/introduction"
+  link: "guide/before/introduction"
 next:
   text: "配置林汐 →"
-  link: "develop/setting/set-sora"
+  link: "guide/env/sora"
 ---
 
 # 准备工作
@@ -38,49 +38,32 @@ next:
 
 ```python
 # /重启 指令只能由 Bot管理员 触发
-reboot_cmd = on_command(
-    cmd='重启',
+reboot_cmd = on_alconna(
+      Alconna("重启"),
     permission=BOT_ADMIN
 )
 
 # /更新 指令可以由 Bot管理员 和 Bot协助者 触发
-update_cmd = on_command(
-    cmd='更新',
+update_cmd = on_alconna(
+      Alconna("更新"),
     permission=BOT_HELPER
 )
 ```
-
----
-::: danger
-请不要将 Bot管理员ID 重复设置在 Bot协助者中。事实上，Bot协助者本就包括Bot管理员
-:::
-
-```py
-# Bot管理员ID
-# 启动后，林汐会创建 ID 为 231010 的 Bot管理员账号，并设置密码。您需要输入 /登录 231010 [密码] 来绑定管理员账户
-BOT_ADMIN=["231010"]
-
-# Bot协助者ID
-# 启动后，林汐会分别创建ID为 666666、233333的 Bot协助者账号，并设置密码。您需要输入 /登录 231010 [密码] 来绑定协助者账户
-BOT_HELPER=["666666","233333"]
-```
-
-启动后，林汐会自动为他们注册账号及密码，并设置权限。  
 
 ## 环境准备
 
 ::: tip
 请确保你的 Python 版本 >= 3.10
 :::
-为了让 Sora 稳定运行，我们使用了虚拟环境（[Poetry](https://python-poetry.org/)）
+为了让 Sora 稳定运行，我们使用了虚拟环境（[pdm](https://github.com/pdm-project/pdm)）
 
 ```bash
-# 安装 poetry 虚拟环境
-pipx install poetry
-# 进入虚拟环境
-poetry shell
+# 安装 pipx
+pip install pipx
+# 安装 PDM 虚拟环境
+pipx install pdm
 # 安装 python 依赖
-poetry install
+pdm install
 # 安装 pre-commit git hook
 pre-commit install
 ```

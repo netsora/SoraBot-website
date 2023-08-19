@@ -19,17 +19,17 @@ SoraBot 还未进入正式版，欢迎在 Issue 中提议要加入哪些新功�
 
 ## Pull Request
 
-SoraBot 使用 poetry 管理项目依赖，由于 pre-commit 也经其管理，所以在此一并说明。
+SoraBot 使用 PDM 管理项目依赖，由于 pre-commit 也经其管理，所以在此一并说明。
 
-下面的命令能在已安装 poetry 和 pnpm 的情况下帮你快速配置开发环境。
+下面的命令能在已安装 PDM 和 pnpm 的情况下帮你快速配置开发环境。
 
 ```bash
 # 安装 pipx 工具
 pip install pipx
-# 安装 poetry 虚拟环境
-pipx install poetry
+# 安装 PDM 虚拟环境
+pipx install pdm
 # 安装 python 依赖
-poetry install
+pdm install
 # 安装 pre-commit git hook
 pre-commit install
 ```
@@ -46,7 +46,7 @@ pre-commit install
 
 请确保你的每一个 commit 都能清晰地描述其意图，一个 commit 尽量只有一个意图。
 
-SoraBot 的 commit message 格式遵循 gitmoji 规范，在创建 commit 时请牢记这一点。
+SoraBot 的 commit message 格式遵循 [gitmoji](https://gitmoji.dev/) 规范，在创建 commit 时请牢记这一点。
 
 ### 工作流概述
 
@@ -78,38 +78,6 @@ SoraBot 文档并没有具体的行文风格规范，但我们建议你尽量写
 以上由[社区创始人 richardchien 的中文排版规范](https://stdrc.cc/style-guides/chinese)补充修改得到。
 
 如果你需要编辑器检查 Markdown 规范，可以在 VSCode 中安装 markdownlint 扩展。
-
-### 文件夹规范
-
-实际上，若无开发需求，您暂时不用了解每一个文件的作用
-
-```bash
-📦 SoraBot
-├── 📂 go-cqhttp
-│   └── ......
-├── 📂 SoraBot
-│   └── 📂 sora
-│       └── 📂 configs          // 配置
-│       └── 📂 database         // 数据库
-│       └── 📂 plugins          // 插件
-│       └── 📂 utils            // 工具
-│       └── 📜 ...  
-│   └── 📂 website
-│       └── 📂 .vitepress
-│           └── 📜 config.ts    // 配置文件
-│       └── 📂 develop          // 开发文档
-│       └── 📂 module           // 使用文档
-│       └── 📜 package.json
-│       └── 📜 README.md
-│   └── 📜 .env                 // 配置文件
-│   └── 📜 .env.prod            // 配置文件
-│   └── 📜 bot.py               // 启动文件
-│   └── 📜 matcher_patch.py
-│   └── 📜 poetry.lock          // 依赖管理
-│   └── 📜 pyproject.toml  
-|   └── 📜 README.md  
-|   └── 📜 requirements.txt     // 依赖列表  
-```
 
 ### 参与开发
 

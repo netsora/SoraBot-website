@@ -23,6 +23,7 @@ import MoreInfo from '../components/MoreInfo.vue'
 import ProjectInfo from '../components/ProjectInfo.vue'
 import RubyCurtain from '../components/RubyCurtain.vue'
 import VolumeBar from '../components/VolumeBar.vue'
+import VPBadge from '../components/VPBadge.vue'
 
 import '../styles/index.scss'
 
@@ -55,6 +56,7 @@ const theme: Theme = {
     app.component('ProjectInfo', ProjectInfo)
     app.component('RubyCurtain', RubyCurtain)
     app.component('VolumeBar', VolumeBar)
+    app.component('Badge', VPBadge)
 
     app.component('CodeGroup', CodeGroup)
     app.component('CodeGroupItem', CodeGroupItem)

@@ -75,7 +75,14 @@ next: false
 ## Banner
 
 通常出现在文档的指令前面，表示可以使用的对象。
-
-<p align="center" style="font-size: 30px"><strong>前面的区域，以后再来探索吧</strong></p>
-
-<Loading></Loading>
+* <Badge type="new" text="New"/>：表示新功能
+* <Badge type="update" text="Update"/>：表示更新功能
+---
+* <Badge type="warning" text="群聊"/>：该指令仅群聊可用
+* <Badge type="private" text="私聊"/>：该指令仅私聊可用  
+* <Badge type="telegram" text="Telegram"/>：该指令仅 Telegram版 Bot 可用
+---
+* <Badge type="owner" text="群主"/>：该指令仅本群群主可用  
+* <Badge type="tip" text="群管理员"/>：该指令仅本群管理员可用
+* <Badge type="danger" text="Bot 管理员"/>：该指令仅 Bot管理员 可用
+* <Badge type="helper" text="Bot 协助者"/>：该指令仅 Bot协助者 可用

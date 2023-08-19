@@ -5,7 +5,8 @@ title: 管理林汐
 
 # 管理
 
-## 更新
+## 更新 
+<Badge type="danger" text="Bot 管理员"/>
 
 更新林汐
 
@@ -14,6 +15,7 @@ title: 管理林汐
 ```
 
 ## 检查更新
+<Badge type="danger" text="Bot 管理员"/> <Badge type="helper" text="Bot 协助者"/>
 
 检查林汐更新情况
 
@@ -22,7 +24,7 @@ title: 管理林汐
 ```
 
 ## 重启
-
+<Badge type="danger" text="Bot 管理员"/>
 重启林汐
 
 ```shell
@@ -30,7 +32,7 @@ title: 管理林汐
 ```
 
 ## cmd
-
+<Badge type="danger" text="Bot 管理员"/>
 运行终端命令
 
 ```shell

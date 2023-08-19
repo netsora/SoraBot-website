@@ -8,6 +8,30 @@
 }
 
 :root {
+  --vp-badge-new-border: #52c41a;
+  --vp-badge-new-text: #52c41a;
+  --vp-badge-new-bg: #f6ffed;
+
+  --vp-badge-update-border: #c796ff;
+  --vp-badge-update-text: #b97efc;
+  --vp-badge-update-bg: #eaeaff;
+
+  --vp-badge-owner-border: #fd8637;
+  --vp-badge-owner-text: #FF8D40;
+  --vp-badge-owner-bg: #fff0e7;
+
+  --vp-badge-private-border: #0070bb;
+  --vp-badge-private-text: #007EC6;
+  --vp-badge-private-bg: #e0f3ff;
+
+  --vp-badge-helper-border: #f95050;
+  --vp-badge-helper-text: #e75a5a;
+  --vp-badge-helper-bg: #ffcdcd2c;
+
+  --vp-badge-telegram-border: #1fa5ff;
+  --vp-badge-telegram-text: #2a96df;
+  --vp-badge-telegram-bg: #def3ff;
+
   --vp-font-family-base: 'HarmonyOSHans', 'HarmonyOS Sans SC', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Microsoft YaHei,
     sans-serif;
@@ -15,6 +39,15 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.dark {
+  --vp-badge-new-bg: #aeff9620;
+  --vp-badge-update-bg: #333342;
+  --vp-badge-private-bg: #6cc7ff0d;
+  --vp-badge-owner-bg: #ffa56916;
+  --vp-badge-helper-bg: #ffdede00;
+  --vp-badge-telegram-bg: #ff84990d;
 }
 
 // 滑稽表情

@@ -8,6 +8,7 @@ next: false
 
 ## 基础
 
+* [帮助](./base/help.md)：获取帮助
 * [管理林汐](./base/manager.md)：管理林汐
 
 ## 核心

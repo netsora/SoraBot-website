@@ -14,7 +14,7 @@ export default defineConfig({
   cleanUrls: true,
 
   head: [
-    ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
+    ['link', { rel: 'shortcut icon', href: '/logo.jpg' }],
     ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/mermaid/10.3.0/mermaid.min.js' }]
   ],
 
@@ -31,7 +31,7 @@ export default defineConfig({
       pattern: 'https://github.com/netsora/SoraBot-website/edit/remake/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/netsora/SoraBot-website' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/netsora/SoraBot' }],
     footer: {
       message: 'AGPL-3.0 License',
       copyright: 'Copyright © 2023 Sora Network'

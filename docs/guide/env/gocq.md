@@ -2,16 +2,14 @@
 title: 配置 Go-cqhttp
 prev:
   text: "← 配置林汐"
-  link: "develop/setting/set-sora"
+  link: "guide/env/sora"
 next: false
 ---
 
 # 配置 go-cqhttp
 
-::: tip 我为什么需要go-cqhttp？
-SoraBot 本身只负责处理消息，需要借助 go-cqhttp 与 QQ 进行通信。  
-
-同时 SoraBot 仅使用 go-cqhttp 进行测试。使用其他 OneBot 实现（如 [OneBot Kotlin](https://github.com/yyuueexxiinngg/onebot-kotlin)），请**自行承担**可能存在的**兼容性问题。**
+::: tip 我是否需要go-cqhttp？
+SoraBot 本身只负责处理消息，需要借助 go-cqhttp 与 QQ 进行通信。如果你只使用 QQ频道 或 Telegram，可以跳过该配置。
 :::
 
 ## 下载

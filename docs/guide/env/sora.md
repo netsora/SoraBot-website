@@ -2,10 +2,10 @@
 title: 配置林汐
 prev:
   text: "← 准备工作"
-  link: "develop/forward/prepare"
+  link: "guide/env/sora"
 next:
   text: "配置Go-cqhttp →"
-  link: "develop/setting/set-gocq"
+  link: "guide/env/gocq"
 ---
 
 # 配置林汐
@@ -29,7 +29,7 @@ driver.register_adapter(TG_Adapter)
 ```
 
 :::
-您需要前往 [QQ开放平台](q.qq.com) 注册您的机器人
+您需要前往 [QQ开放平台](q.qq.com) 注册您的机器人，然后将 `BotAppID`、`机器人令牌` 和 `机器人密钥` 填入 env 文件的 `QQGUILD_BOTS`
 
 ## 申请 Telegram 机器人
 
@@ -102,7 +102,7 @@ telegram_bots = [{"token": "1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHI"}]
 
 #### .env.prod
 
-这个文件没什么好改的，可以直接用
+如果你使用代理，请不要忘记填写 `PROXY`
 
 ```py
 HOST=127.0.0.1
@@ -113,9 +113,9 @@ LOG_LEVEL=INFO
 
 NICKNAME=["林汐","Sora"]
 
-# 如果使用 Telegram 适配器，请务必填写！
 PROXY=""
 
+ALCONNA_AUTO_SEND_OUTPUT=true
 ALCONNA_USE_COMMAND_START=true
 ```
 
