@@ -25,13 +25,13 @@ next:
 ## 你可能会问
 
 <ChatWindow title="你可能会问">
-  <ChatMsg name="我" avatar="/images/i.png" onright>什么是独立ID，它有什么用？</ChatMsg>
-  <ChatMsg name="Sora" >独立ID是林汐为每个用户分配的专属ID，通过它，我们便可知晓用户信息、绑定信息、权限等，以便我们更好向用户提供服务</ChatMsg>
-  <ChatMsg name="我" avatar="/images/i.png" onright>全新的权限系统，新在哪里？</ChatMsg>
-  <ChatMsg name="Sora" >林汐的权限系统，并没有使用 Nonebot2 所提供的 SUPERUSER，而是改为了 Bot 管理员 和 Bot 协助者</ChatMsg>
-  <ChatMsg name="我" avatar="/images/i.png" onright>Bot管理员 和 Bot协助者 的区别是？</ChatMsg>
-  <ChatMsg name="Sora" >Bot管理员是最高权限，Bot协助者 在其下，林汐的部分指令需要 Bot管理员 权限，而部分指令至少需要 Bot协助者 权限</ChatMsg>
-  <ChatMsg name="我" avatar="/images/i.png" onright>？</ChatMsg>
+  <ChatMsg name="Komorebi" avatar="/images/i.jpg" onright>什么是独立ID，它有什么用？</ChatMsg>
+  <ChatMsg name="林汐ᴮᴼᵀ" avatar="/logo.jpg">独立ID是林汐为每个用户分配的专属ID，通过它，我们便可知晓用户信息、绑定信息、权限等，以便我们更好向用户提供服务</ChatMsg>
+  <ChatMsg name="Komorebi" avatar="/images/i.jpg" onright>全新的权限系统，新在哪里？</ChatMsg>
+  <ChatMsg name="林汐ᴮᴼᵀ" avatar="/logo.jpg">林汐的权限系统，并没有使用 Nonebot2 所提供的 SUPERUSER，而是改为了 Bot 管理员 和 Bot 协助者</ChatMsg>
+  <ChatMsg name="Komorebi" avatar="/images/i.jpg" onright>Bot管理员 和 Bot协助者 的区别是？</ChatMsg>
+  <ChatMsg name="林汐ᴮᴼᵀ" avatar="/logo.jpg">Bot管理员是最高权限，Bot协助者 在其下，林汐的部分指令需要 Bot管理员 权限，而部分指令至少需要 Bot协助者 权限</ChatMsg>
+  <ChatMsg name="Komorebi" avatar="/images/i.jpg" onright>¿</ChatMsg>
 </ChatWindow>
 
 让我们举个例子：  
