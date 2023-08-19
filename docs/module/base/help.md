@@ -4,7 +4,7 @@ title: 帮助
 
 # 帮助
 
-<Badge type="warning" text="群聊"/> <Badge type="private" text="私聊"/> <Badge type="telegram" text="Telegram"/>
+<Badge id="margin" type="warning" text="群聊"/> <Badge type="private" text="私聊"/> <Badge type="telegram" text="Telegram"/>
 
 查询林汐内置帮助。
 

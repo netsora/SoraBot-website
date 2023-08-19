@@ -4,7 +4,7 @@ title: 签到
 
 # 签到 
 
-<Badge type="warning" text="群聊"/> <Badge type="private" text="私聊"/> <Badge type="telegram" text="Telegram"/>
+<Badge id="margin" type="warning" text="群聊"/> <Badge type="private" text="私聊"/> <Badge type="telegram" text="Telegram"/>
 
 获取[硬币](../coin.md)与经验的一种方式。
 ## 签到
