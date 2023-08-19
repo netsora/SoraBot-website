@@ -2,13 +2,14 @@
 
 <script setup lang="ts">
 defineProps<{
+  id?: string
   text?: string
   type?: 'new' | 'update' | 'info' | 'tip' | 'warning' | 'danger' | 'private' | 'owner' | 'helper' | 'telegram'
 }>()
 </script>
 
 <template>
-  <span class="VPBadge" :class="type ?? 'tip'">
+  <span :id="id" class="VPBadge" :class="type ?? 'tip'">
     <slot>{{ text }}</slot>
   </span>
 </template>
@@ -26,7 +27,7 @@ defineProps<{
   transform: translateY(-2px);
 }
 
-.vp-doc h1>.VPBadge {
+  .vp-doc h1>.VPBadge {
   margin-top: 4px;
   vertical-align: top;
 }
@@ -107,6 +108,9 @@ defineProps<{
   border-color: var(--vp-badge-update-border);
   color: var(--vp-badge-update-text);
   background-color: var(--vp-badge-update-bg);
+}
+#margin {
+  margin-top: 1rem
 }
 
 </style>
