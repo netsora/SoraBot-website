@@ -9,7 +9,6 @@ const module = [
     text: '基础',
     items: [
       { text: '帮助', link: '/module/base/help' },
-      { text: '管理', link: '/module/base/manager' },
     ]
   },
   {
@@ -17,6 +16,13 @@ const module = [
     items: [
       { text: '签到', link: '/module/core/sign' },
       { text: '跨平台绑定', link: '/module/core/bind' }
+    ]
+  },
+  {
+    text: '管理',
+    items: [
+      { text: 'Bot 管理', link: '/module/manage/bot' },
+      { text: '黑名单', link: '/module/manage/ban' },
     ]
   }
 ]

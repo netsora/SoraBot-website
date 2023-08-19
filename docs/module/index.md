@@ -5,16 +5,20 @@ next: false
 ---
 
 # 索引
-
-## 基础
+---
+#### 基础
 
 * [帮助](./base/help.md)：获取帮助
-* [管理林汐](./base/manager.md)：管理林汐
 
-## 核心
+#### 核心
 
 * [签到](./core/sign.md)：签到
 * [绑定](./core/bind.md)：跨平台账号绑定
+
+#### 管理
+
+* [黑名单](./manage/ban.md)：黑名单
+* [Bot 管理](./manage/bot.md)：管理林汐
 
 ---
 
